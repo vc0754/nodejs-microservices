@@ -1,0 +1,37 @@
+{
+  "name": "nodejs-microservices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./fw/index.js",
+    "dev-ms": "nodemon ./fw/microservices/shop-stats.js",
+    "dev2": "nodemon server.js --exec babel-node",
+    "start": "pm2 start ecosystem.config.js --interpreter babel-node"
+  },
+  "keywords": [
+    "nodejs",
+    "microservices",
+    "express"
+  ],
+  "author": "vc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vc0754/nodejs-microservices/issues"
+  },
+  "homepage": "https://github.com/vc0754/nodejs-microservices#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.17.1",
+    "pm2": "^3.5.1",
+    "seneca": "^3.16.0",
+    "seneca-entity": "^5.1.2",
+    "seneca-web": "^2.2.1",
+    "seneca-web-adapter-express": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.2"
+  }
+}
