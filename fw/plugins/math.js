@@ -1,3 +1,7 @@
+/**
+ * 计算插件
+ */
+
 var fs = require('fs')
 
 module.exports = function math (options) {
@@ -23,8 +27,9 @@ module.exports = function math (options) {
   }
   
   function sum (msg, respond) {
+    console.log(`加法运算： ${msg.left + '+' + msg.right}`)
     var out = { answer: msg.left + msg.right }
-    log('sum ' + msg.left + '+' + msg.right + '=' + out.answer + '\n' )
+    log('加法 ' + msg.left + '+' + msg.right + '=' + out.answer + '\n' )
     respond(null, out)
   }
   
@@ -37,8 +42,9 @@ module.exports = function math (options) {
   }
 
   function product (msg, respond) {
+    console.log(`乘法运算： ${msg.left + 'x' + msg.right}`)
     var out = { answer: msg.left * msg.right }
-    log('product ' + msg.left + '*' + msg.right + '=' + out.answer + '\n' )
+    log('乘法 ' + msg.left + '*' + msg.right + '=' + out.answer + '\n' )
     respond(null, out)
   }
   

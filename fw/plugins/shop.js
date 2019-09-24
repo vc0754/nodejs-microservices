@@ -1,15 +1,13 @@
+/**
+ * 店铺插件
+ */
+
 module.exports = function ( options ) {
   
   this.add({ role: 'shop', get: 'product' }, get_product)
   this.add({ role: 'shop', add: 'product' }, add_product)
   this.add({ role: 'shop', cmd: 'purchase' }, purchase)
-  // this.add({ role: 'shop', info: 'purchase' }, purchase_info)
   
-  // this.add({ init: 'shop' }, function (msg, respond) {
-  //   console.log('shop init')
-  //   respond()
-  // })
-
   function get_product (msg, respond) {
     this.make('product').load$(msg.id, respond)
   }
@@ -38,10 +36,4 @@ module.exports = function ( options ) {
       })
     })
   }
-
-  // function purchase_info (msg, respond) {
-  //   this.log.info('purchase', msg.purchase)
-  //   respond()
-  // }
-  
 }
