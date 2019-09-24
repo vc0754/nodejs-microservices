@@ -1,7 +1,7 @@
 # NodeJS Microservices
 基于 NodeJS 的微服务框架，使用 Seneca 工具搭建  
 
-本地环境使用 nodemon 进行部署，方便调试时自动重启节点，排查错误
+本地环境使用 nodemon 进行部署，方便调试时自动重启节点，排查错误  
 （预）生产环境使用 PM2 进行部署
 
 ## 本地部署及调试
@@ -27,6 +27,8 @@ npm run dev
 ```
 创建产品： $-/-/product;id=cecvnd;{name:Banana,price:1.99}
 ```
+
+### 调试
 
 通过 HTTP 访问以下地址，配合产品 ID `cecvnd` 进行调试。可在 console 控制台查看对应变化。
 ```
@@ -63,9 +65,6 @@ http://localhost:3000/api/shop/purchase?pid=cecvnd → {
 }
 
 ```
-
-### 调试
-
 
 ## 生产部署及调试
 (...)
